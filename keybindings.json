@@ -1,0 +1,328 @@
+// Place your key bindings in this file to override the defaults
+[
+    { "key": "ctrl+'", "command": "workbench.action.terminal.focus"},
+    { "key": "ctrl+`", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"},
+    { "key": "alt-f",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args": 
+            {"langId": "clojure",
+             "name": "defn"}},
+    { "key": "alt+shift-f",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && editorLangId == clojure",
+    "args": 
+        {"langId": "clojure",
+            "name": "fn"}},
+    { "key": "alt+shift-l",
+      "command": "editor.action.insertSnippet",
+      "when": "editorTextFocus && editorLangId == clojure",
+      "args":
+         {"langId": "clojure",
+          "name": "λ"}},
+    { "key": "alt+shift-t",
+      "command": "editor.action.insertSnippet",
+      "when": "editorTextFocus && editorLangId == clojure",
+      "args":
+         {"langId": "clojure",
+          "name": "bfalse"}},
+    { "key": "alt-u",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && editorLangId == clojure",
+    "args": 
+        {"langId": "clojure",
+            "name": "set/union"}},
+    { "key": "alt-i",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && editorLangId == clojure",
+    "args": 
+        {"langId": "clojure",
+            "name": "set/intersection"}},
+    { "key": "alt-p",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args": 
+            {"langId": "clojure",
+                "name": "partial"}},
+    { "key": "alt-c",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args": 
+            {"langId": "clojure",
+                "name": "comp"}},
+    { "key": "alt+shift-/",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args": {
+            "langId": "clojure",
+            "name": "if"
+        }
+    },    
+    {"key": "alt--",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "set/difference"
+        }
+    },
+    {"key": "alt+r",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "reduce"
+        }
+    },
+    {"key": "alt+shift-r",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "recur"
+        }
+    },
+    {"key": "alt+w",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "filter"
+        }
+    },
+    {"key": "alt+q",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "require"
+        }
+    },
+    {"key": "alt+d",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "def"
+        }
+    },
+    {"key": "alt+a",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "doseq"
+        }
+    },
+    {"key": "alt+v",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "apply"
+        }
+    },
+    {"key": "alt+=",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "not="
+        }
+    },
+    {"key": "alt-o",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "for"
+        }
+    },
+    {
+        "key": "alt+shift-o",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "or"
+        }
+    },
+    {"key": "alt+.",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "geq"
+        }
+    },
+    {"key": "alt+,",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "leq"
+        }
+    },
+    {"key": "shift+alt+,",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "threadfirst"
+        }
+    },
+    {"key": "shift+alt+.",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "threadlast"
+        }
+    },
+    {"key": "alt+l",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "let"
+        }
+    },
+    {"key": "alt+m",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "map"
+        }
+    },
+    {"key": "alt+5",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "sqrt"
+        }
+    },
+    {
+        "key": "shift+alt+s",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure"
+    },
+    {
+        "key": "shift+alt+i",
+        "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args": {
+            "langId": "clojure",
+            "name": "filter"
+        }
+    },
+    {
+        "key": "alt+n",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "require"
+        }
+    },
+    {
+        "key": "alt+shift+s",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "some"
+        }
+    },
+    {
+        "key": "alt-s",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "newset"
+        }
+    },
+    {
+        "key": "alt+shift-u",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "subset"
+        }
+    },
+    {
+        "key": "alt+shift-n",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "not"
+        }
+    },
+    {
+        "key": "alt+6",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "mathfloor"
+        }
+    },
+    {
+        "key": "alt+shift-3",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "xor"
+        }
+    },
+    {
+        "key": "alt-t",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "true"
+        }
+    },
+    {
+        "key": "alt+shift-a",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "and"
+        }
+    },
+    {
+        "key": "alt-x",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "assoc"
+        }
+    },
+    {
+        "key": "alt+shift-p",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "partition"
+        }
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == clojure",
+        "args":{
+            "langId": "clojure",
+            "name": "juxt"
+        }
+    }
+]
