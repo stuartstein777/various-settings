@@ -1,0 +1,269 @@
+{
+	// Place your snippets for clojure here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"set/union": {
+		"prefix": "set/union",
+		"body": [
+			"(set/union $0)",
+		],
+		"description": "set/union"
+	},
+	"defn": {
+		"prefix": "(defn)",
+		"body": [
+			"(defn $0 [])",
+		],
+		"description": "defn"
+	},
+	"set/intersection": {
+		"prefix": "set/intersection",
+		"body": [
+			"(set/intersection $0)",
+		],
+		"description": "set/intersection"
+	},
+	"set/difference": {
+		"prefix": "set/intersection",
+		"body": [
+			"(set/difference $0)",
+		],
+		"description": "set/difference"
+	},
+	"fn": {
+		"prefix": "fn",
+		"body": [
+			"(fn [] $0)",
+		],
+		"description": "fn"
+	},
+	"partial": {
+		"prefix": "partial",
+		"body": [
+			"(partial $0)",
+		],
+		"description": "partial"
+	},
+	"comp":{
+		"prefix": "comp",
+		"body": [
+			"(comp $0)",
+		],
+		"description": "comp"
+	},
+	"if":{
+		"prefix": "if",
+		"body": [
+			"(if $0)"
+		],
+		"description": "if"
+	},
+	"some": {
+		"prefix": "some",
+		"body": [
+			"(some #{$1} $2)"
+		],
+		"description": "some"
+	},
+	"reduce": {
+		"prefix": "reduce",
+		"body": [
+			"(reduce $0)"
+		],
+		"description": "reduce"
+	},
+	"map": {
+		"prefix": "map",
+		"body": [
+			"(map $0)"
+		],
+		"description": "map"
+	},
+	"filter": {
+		"prefix": "filter",
+		"body": [
+			"(filter $0)"
+		],
+		"description": "filter"
+	},
+	"require": {
+        "prefix": "require",
+        "body": [
+            "(:require [${1:namespace} :as [$0]])"
+        ],
+        "description": "require"
+    },
+	"def": {
+        "prefix": "def",
+        "body": [
+            "(def $0)"
+        ],
+        "description": "def"
+    },
+	"doseq": {
+        "prefix": "doseq",
+        "body": [
+            "(doseq [$1]$0)"
+        ],
+        "description": "doseq"
+    },
+	"not=": {
+        "prefix": "not=",
+        "body": [
+            "(not= $0)"
+        ],
+        "description": "not="
+    },
+	"for": {
+        "prefix": "for",
+        "body": [
+            "(for [$1]$0)"
+        ],
+        "description": "not="
+    },
+	"geq": {
+        "prefix": ">=",
+        "body": [
+            ">="
+        ],
+        "description": ">="
+    },
+	"leq": {
+        "prefix": "<=",
+        "body": [
+            "<="
+        ],
+        "description": "<="
+    },
+	"let": {
+        "prefix": "let",
+        "body": [
+            "(let [$0])"
+        ],
+        "description": "let"
+    },
+	"threadlast": {
+        "prefix": "->>",
+        "body": [
+            "(->> $0)"
+        ],
+        "description": "threadlast"
+    },
+	"threadfirst": {
+        "prefix": "->",
+        "body": [
+            "(-> $0)"
+        ],
+        "description": "threadfirst"
+    },
+	"sqrt": {
+		"prefix": "sqrt",
+		"body": [
+			"(Math/sqrt $0)"
+		],
+		"description": "square root"
+	},
+	"λ":{
+		"prefix": "lambda",
+		"body":[
+			"λ"
+		],
+		"description": "λ"
+	},
+	"bfalse":{
+		"prefix": "false",
+		"body":[
+			"⊥"
+		],
+		"description": "⊥"
+	},
+	"apply":{
+		"prefix": "apply",
+		"body":[
+			"(apply $0)"
+		]
+	},
+	"newset":{
+		"prefix": "set",
+		"body":[
+			"#{$0}"
+		]
+	},
+	"recur": {
+			"prefix": "recur",
+			"body": [
+				"(recur $0)"
+			]
+	},
+	"or": {
+		"prefix": "or",
+		"body": [
+			"(or $0)"
+		]
+	},
+	"subset": {
+		"prefix": "subset",
+		"body":[
+			"(set/subset $0)"
+		]
+	},
+	"not":{
+		"prefix": "not",
+		"body": [
+			"(not $0)"
+		]
+	},
+	"mathfloor": {
+		"prefix": "Math/f",
+		"body":[
+			"(Math/floor $0)"
+		]
+	},
+	"xor":{
+		"prefix": "xor",
+		"body":[
+			"(bit-xor $0)"
+		]
+	},
+	"true":{
+		"prefix": "true",
+		"body": [
+			"true"
+		]
+	},
+	"and":{
+		"prefix": "and",
+		"body":[
+			"(and $0)"
+		]
+	},
+	"assoc":{
+		"prefix": "assoc",
+		"body":[
+			"(assoc $0)"
+		]
+	},
+	"partition":{
+		"prefix": "partition",
+		"body":[
+			"(partition-by $1 $2)"
+		]
+	},
+	"juxt":{
+		"prefix": "juxt",
+		"body":[
+			"(juxt $1)"
+		]
+	}
+}
