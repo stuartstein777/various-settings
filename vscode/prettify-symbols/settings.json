@@ -1,739 +1,48 @@
 {
     "telemetry.enableTelemetry": false,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "mssql.connections": [
-        {
-            "server": "{{put-server-name-here}}",
-            "database": "{{put-database-name-here}}",
-            "user": "{{put-username-here}}",
-            "password": "{{put-password-here}}"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "calva.paredit.defaultKeyMap": "strict",
-    "files.autoSave": "afterDelay",
     "calva.prettyPrintingOptions": {
-        "enabled": true,
-        "printEngine": "pprint",
+        "enabled": false,
         "width": 120,
-        "maxLength": 50
+        "maxLength": 50,
+        "printEngine": "pprint"
     },
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "prettifySymbolsMode.substitutions": [
-
-        {
-            "language": [
-                "coq",
-                {
-                    "pattern": "**/*.v"
-                }
-            ],
-            "substitutions": [
-                {
-                    "pre": "\\b",
-                    "ugly": "forall",
-                    "post": "\\b",
-                    "pretty": "∀"
-                },
-                {
-                    "pre": "\\b",
-                    "ugly": "exists",
-                    "post": "\\b",
-                    "pretty": "∃"
-                },
-                {
-                    "pre": "\\b",
-                    "ugly": "fun",
-                    "post": "\\b",
-                    "pretty": "λ"
-                },
-                {
-                    "pre": "\\b",
-                    "ugly": "False",
-                    "post": "\\b",
-                    "pretty": "⊥"
-                },
-                {
-                    "pre": "\\b",
-                    "ugly": "True",
-                    "post": "\\b",
-                    "pretty": "⊤"
-                },
-                {
-                    "pre": "\\b",
-                    "ugly": "Defined[.]",
-                    "post": "(?:$|\\s)",
-                    "pretty": "□"
-                },
-                {
-                    "pre": "\\b",
-                    "ugly": "Admitted[.]",
-                    "post": "(?:$|\\s)",
-                    "pretty": "😱"
-                },
-                {
-                    "pre": "\\b",
-                    "ugly": "Proof[.]",
-                    "post": "(?:$|\\s)",
-                    "pretty": "∵"
-                },
-                {
-                    "pre": "\\b",
-                    "ugly": "Qed[.]",
-                    "post": "(?:$|\\s)",
-                    "pretty": "∎"
-                },
-                {
-                    "pre": "\\b",
-                    "ugly": "nat",
-                    "post": "\\b",
-                    "pretty": "ℕ"
-                },
-                {
-                    "pre": "[a-zA-Z]",
-                    "ugly": "_1",
-                    "post": "\\b",
-                    "pretty": "₁"
-                },
-                {
-                    "pre": "[a-zA-Z]",
-                    "ugly": "_2",
-                    "post": "\\b",
-                    "pretty": "₂"
-                },
-                {
-                    "pre": "[a-zA-Z]",
-                    "ugly": "_3",
-                    "post": "\\b",
-                    "pretty": "₃"
-                },
-                {
-                    "pre": "[a-zA-Z]",
-                    "ugly": "_4",
-                    "post": "\\b",
-                    "pretty": "₄"
-                },
-                {
-                    "pre": "[a-zA-Z]",
-                    "ugly": "_5",
-                    "post": "\\b",
-                    "pretty": "₅"
-                },
-                {
-                    "pre": "[a-zA-Z]",
-                    "ugly": "_6",
-                    "post": "\\b",
-                    "pretty": "₆"
-                },
-                {
-                    "pre": "[a-zA-Z]",
-                    "ugly": "_7",
-                    "post": "\\b",
-                    "pretty": "₇"
-                },
-                {
-                    "pre": "[a-zA-Z]",
-                    "ugly": "_8",
-                    "post": "\\b",
-                    "pretty": "₈"
-                },
-                {
-                    "pre": "[a-zA-Z]",
-                    "ugly": "_9",
-                    "post": "\\b",
-                    "pretty": "₉"
-                },
-                {
-                    "pre": "[a-zA-Z]",
-                    "ugly": "_0",
-                    "post": "\\b",
-                    "pretty": "₀"
-                },
-                {
-                    "ugly": "/\\\\",
-                    "pretty": "∧"
-                },
-                {
-                    "ugly": "\\\\/",
-                    "pretty": "∨"
-                },
-                {
-                    "ugly": "=>",
-                    "pretty": "⇒"
-                },
-                {
-                    "ugly": ":=",
-                    "pretty": "≜"
-                },
-                {
-                    "ugly": "<->",
-                    "pretty": "⟷"
-                },
-                {
-                    "ugly": "->",
-                    "pretty": "⟶"
-                },
-                {
-                    "ugly": "<-",
-                    "pretty": "←"
-                },
-                {
-                    "ugly": "<>",
-                    "pretty": "≠"
-                }
-            ]
-        },
-        {
-            "language": "haskell",
-            "substitutions": [
-                {
-                    "ugly": "\\\\",
-                    "pretty": "λ",
-                    "post": "\\s*(?:\\w|_).*?\\s*->"
-                },
-                {
-                    "ugly": "<-",
-                    "pretty": "←"
-                },
-                {
-                    "ugly": "->",
-                    "pretty": "→"
-                },
-                {
-                    "ugly": "==",
-                    "pretty": "≡"
-                },
-                {
-                    "ugly": "/=",
-                    "pretty": "≢"
-                },
-                {
-                    "ugly": "\\(\\)",
-                    "pretty": "∅"
-                },
-                {
-                    "ugly": "sqrt\\s?",
-                    "pretty": "√",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "&&",
-                    "pretty": "∧"
-                },
-                {
-                    "ugly": "\\|\\|",
-                    "pretty": "∨"
-                },
-                {
-                    "ugly": "not\\s?",
-                    "pretty": "¬",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": ">",
-                    "pretty": ">",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": "<",
-                    "pretty": "<",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": ">=",
-                    "pretty": "≥",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": "<=",
-                    "pretty": "≤",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": "alpha",
-                    "pretty": "α",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "beta",
-                    "pretty": "β",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "gamma",
-                    "pretty": "γ",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "delta",
-                    "pretty": "δ",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "''",
-                    "pretty": "″"
-                },
-                {
-                    "ugly": "'",
-                    "pretty": "′"
-                },
-                {
-                    "ugly": "!!",
-                    "pretty": "‼"
-                },
-                {
-                    "ugly": "\\.\\.",
-                    "pretty": "…"
-                },
-                {
-                    "ugly": "undefined",
-                    "pretty": "⊥"
-                },
-                {
-                    "ugly": "`elem`",
-                    "pretty": "∈"
-                },
-                {
-                    "ugly": "`notElem`",
-                    "pretty": "∉"
-                },
-                {
-                    "ugly": "`isSubsetOf`",
-                    "pretty": "⊆"
-                },
-                {
-                    "ugly": "`union`",
-                    "pretty": "⋃"
-                },
-                {
-                    "ugly": "`intersect`",
-                    "pretty": "⋂"
-                }
-            ]
-        },
-        {
-            "language": "idris",
-            "substitutions": [
-                {
-                    "ugly": "\\\\",
-                    "pretty": "λ",
-                    "post": "\\s*(?:\\w|_).*?\\s*=>"
-                },
-                {
-                    "ugly": "<-",
-                    "pretty": "←"
-                },
-                {
-                    "ugly": "->",
-                    "pretty": "→"
-                },
-                {
-                    "ugly": "==",
-                    "pretty": "≡"
-                },
-                {
-                    "ugly": "/=",
-                    "pretty": "≢"
-                },
-                {
-                    "ugly": "\\(\\)",
-                    "pretty": "∅"
-                },
-                {
-                    "ugly": "sqrt\\s?",
-                    "pretty": "√",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "&&",
-                    "pretty": "∧"
-                },
-                {
-                    "ugly": "\\|\\|",
-                    "pretty": "∨"
-                },
-                {
-                    "ugly": "not\\s?",
-                    "pretty": "¬",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": ">",
-                    "pretty": ">",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": "<",
-                    "pretty": "<",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": ">=",
-                    "pretty": "≥",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": "<=",
-                    "pretty": "≤",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": "alpha",
-                    "pretty": "α",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "beta",
-                    "pretty": "β",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "gamma",
-                    "pretty": "γ",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "delta",
-                    "pretty": "δ",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "''",
-                    "pretty": "″"
-                },
-                {
-                    "ugly": "'",
-                    "pretty": "′"
-                },
-                {
-                    "ugly": "=>",
-                    "pretty": "⇒"
-                },
-                {
-                    "ugly": "\\\\\\\\",
-                    "pretty": "∖"
-                }
-            ]
-        },
-        {
-            "language": "ocaml",
-            "substitutions": [
-                {
-                    "ugly": "fun",
-                    "pretty": "λ",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "<-",
-                    "pretty": "←"
-                },
-                {
-                    "ugly": "->",
-                    "pretty": "→"
-                },
-                {
-                    "ugly": "=",
-                    "pretty": "=",
-                    "pre": "[^<>=!]|^",
-                    "post": "[^<>=]|$"
-                },
-                {
-                    "ugly": "==",
-                    "pretty": "≡"
-                },
-                {
-                    "ugly": "!=",
-                    "pretty": "≢"
-                },
-                {
-                    "ugly": "<>",
-                    "pretty": "≠"
-                },
-                {
-                    "ugly": "\\[\\]",
-                    "pretty": "ε"
-                },
-                {
-                    "ugly": "sqrt\\s?",
-                    "pretty": "√",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "&&",
-                    "pretty": "∧"
-                },
-                {
-                    "ugly": "\\|\\|",
-                    "pretty": "∨"
-                },
-                {
-                    "ugly": "not\\s?",
-                    "pretty": "¬",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": ">",
-                    "pretty": ">",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": "<",
-                    "pretty": "<",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": ">=",
-                    "pretty": "≥",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": "<=",
-                    "pretty": "≤",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": "alpha",
-                    "pretty": "α",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "beta",
-                    "pretty": "β",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "gamma",
-                    "pretty": "γ",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "delta",
-                    "pretty": "δ",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "''",
-                    "pretty": "″"
-                },
-                {
-                    "ugly": "'",
-                    "pretty": "′"
-                },
-                {
-                    "ugly": "List[.]for_all",
-                    "pretty": "∀",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "List[.]exists",
-                    "pretty": "∃",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "List[.]mem",
-                    "pretty": "∈",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "\\|",
-                    "pretty": "║",
-                    "pre": "^\\s+"
-                }
-            ]
-        },
-        {
-            "language": "fsharp",
-            "substitutions": [
-                {
-                    "ugly": "fun",
-                    "pretty": "λ",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "<-",
-                    "pretty": "←"
-                },
-                {
-                    "ugly": "->",
-                    "pretty": "→"
-                },
-                {
-                    "ugly": "=",
-                    "pretty": "=",
-                    "pre": "[^<>=!]|^",
-                    "post": "[^<>=]|$"
-                },
-                {
-                    "ugly": "==",
-                    "pretty": "≡"
-                },
-                {
-                    "ugly": "!=",
-                    "pretty": "≢"
-                },
-                {
-                    "ugly": "<>",
-                    "pretty": "≠"
-                },
-                {
-                    "ugly": "sqrt\\s?",
-                    "pretty": "√",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "&&",
-                    "pretty": "∧"
-                },
-                {
-                    "ugly": "\\|\\|",
-                    "pretty": "∨"
-                },
-                {
-                    "ugly": "not\\s?",
-                    "pretty": "¬",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": ">",
-                    "pretty": ">",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": "<",
-                    "pretty": "<",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": ">=",
-                    "pretty": "≥",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": "<=",
-                    "pretty": "≤",
-                    "pre": "[^=\\-<>]|^",
-                    "post": "[^=\\-<>]|$"
-                },
-                {
-                    "ugly": "alpha",
-                    "pretty": "α",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "beta",
-                    "pretty": "β",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "gamma",
-                    "pretty": "γ",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "delta",
-                    "pretty": "δ",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "''",
-                    "pretty": "″"
-                },
-                {
-                    "ugly": "'",
-                    "pretty": "′"
-                },
-                {
-                    "ugly": "List[.]forall",
-                    "pretty": "∀",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": "List[.]exists",
-                    "pretty": "∃",
-                    "pre": "\\b",
-                    "post": "\\b"
-                },
-                {
-                    "ugly": ">>",
-                    "pretty": "≫",
-                    "pre": "[^=<>]|^",
-                    "post": "[^=<>]|$"
-                },
-                {
-                    "ugly": "<<",
-                    "pretty": "≪",
-                    "pre": "[^=<>]|^",
-                    "post": "[^=<>]|$"
-                },
-                {
-                    "ugly": "\\|",
-                    "pretty": "║",
-                    "pre": "^\\s+"
-                }
-            ]
-        },
         {
             "language": "clojure",
             "prettifySymbolsMode.renderOn": "none",
             "prettifySymbolsMode.revealOn": "none",
             "prettifySymbolsMode.prettyCursor": "none",
-            "prettifySymbolsMode.adjustCursorMovement": true,
+             "prettifySymbolsMode.adjustCursorMovement": true,
             "substitutions": [
                 {
-                    "ugly": "fn",
-                    "pretty": "λ",
+                    "ugly": "rf/dispatch-sync",
                     "pre": "\\(",
-                    "post": "\\s\\[",
+                    "post": "\\s",
+                    "pretty": "rf/~~>",
+                    "style": {
+                        "color": "#B877DBE6",
+                    }
+                },
+                {
+                    "ugly": "rf/subscribe",
+                    "pre": "\\(",
+                    "post": "\\s",
+                    "pretty": "rf/<~~",
+                    "style": {
+                        "color": "#ffd633",
+                    }
+                },
+                {
+                    "ugly": "fn",
+                    "pre": "\\(",
+                    "post": "\\s",
+                    "pretty": "λ",
                     "style": {
                         "color": "#B877DBE6"
                     }
@@ -741,16 +50,25 @@
                 {
                     "ugly": "defn",
                     "pretty": "λ",
-                    "pre": "\\(",
+                     "pre": "\\(",
                     "post": "\\s",
                     "style": {
-                        "color": "#B877DBE6"
+                        "color": "#ff3399"
+                    }
+                },
+                {
+                    "ugly": "defn-",
+                    "pretty": "λ-",
+                     "pre": "\\(",
+                    "post": "\\s",
+                    "style": {
+                        "color": "#ff3399"
                     }
                 },
                 {
                     "ugly": "#{}",
                     "pretty": "ø",
-                    "post": "\\s",
+                    "post": "",
                     "style": {
                         "color": "#B877DBE6"
                     }
@@ -758,15 +76,6 @@
                 {
                     "ugly": "comp",
                     "pretty": "∘",
-                    "pre": "\\(",
-                    "post": "\\s",
-                    "style": {
-                        "color": "#B877DBE6"
-                    }
-                },
-                {
-                    "ugly": "reduce",
-                    "pretty": "∑",
                     "pre": "\\(",
                     "post": "\\s",
                     "style": {
@@ -783,8 +92,8 @@
                     }
                 },
                 {
-                    "ugly": "set/union",
-                    "pretty": "⋃",
+                    "ugly": "def",
+                    "pretty": "≡",
                     "pre": "\\(",
                     "post": "\\s",
                     "style": {
@@ -792,8 +101,53 @@
                     }
                 },
                 {
+                    "ugly": "set/union",
+                    "pretty": "∪",
+                    "pre": "",
+                    "post": "",
+                    "style": {
+                        "color": "#B877DBE6"
+                    }
+                },
+                {
                     "ugly": "set/intersection",
-                    "pretty": "⋂",
+                    "pretty": "∩",
+                    "pre": "",
+                    "post": "",
+                    "style": {
+                        "color": "#B877DBE6"
+                    }
+                },
+                {
+                    "ugly": "set/subset?",
+                       "pretty": "⊂",
+                    "pre": "",
+                    "post": "",
+                    "style": {
+                        "color": "#B877DBE6"
+                    }
+                },
+                {
+                    "ugly": "set/difference",
+                    "pretty": "\\-",
+                    "pre": "",
+                    "post": "",
+                       "style": {
+                        "color": "#B877DBE6"
+                    }
+                },
+                {
+                    "ugly": "reduce",
+                    "pretty": "∑",
+                    "pre": "\\(",
+                    "post": "\\s",
+                    "style": {
+                        "color": "#B877DBE6"
+                    }
+                },
+                {
+                    "ugly": "apply",
+                    "pretty": "...",
                     "pre": "\\(",
                     "post": "\\s",
                     "style": {
@@ -810,8 +164,8 @@
                     }
                 },
                 {
-                    "ugly": "def",
-                    "pretty": "≡",
+                    "ugly": "prop/for-all",
+                    "pretty": "∀",
                     "pre": "\\(",
                     "post": "\\s",
                     "style": {
@@ -819,14 +173,109 @@
                     }
                 },
                 {
-                    "ugly": "Math/sqrt",
-                    "pretty": "√",
-                    "pre": "\\(",
-                    "post": "\\s"
+                    "ugly": "symmetric-difference",
+                    "pretty": "∆",
+                    "pre": "",
+                    "post": "",
+                    "style": {
+                        "color": "#B877DBE6"
+                    }
                 }
             ]
         }
     ],
-    "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontLigatures": true
+    "editor.fontFamily": "'Jetbrains Mono','Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "java.project.importHint": false,
+    "redhat.telemetry.enabled": false,
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": ""
+        },
+        {
+            "server": "localhost",
+            "database": "",
+            "authenticationType": "SqlLogin",
+            "user": "sa",
+            "password": "",
+            "emptyPasswordInput": false,
+            "savePassword": false
+        }
+    ],
+    "calva.customREPLCommandSnippets": [
+    
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "go.toolsManagement.autoUpdate": true,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Cobalt2",
+    "agdaMode.connection.agdaPath": "/usr/bin/agda",
+    "github.gitAuthentication": false,
+    "editor.semanticTokenColorCustomizations": null,
+    "tabnine.experimentalAutoImports": true,
+    "editor.tokenColorCustomizations": {
+        "[Nord]": {
+            "comments": "#93fccba1"
+        }
+    },        
+    "workbench.preferredDarkColorTheme": "Nord",
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command",
+        "push:command"
+    ],
+    "window.zoomLevel": -1,
+    "editor.fontSize": 20,
+    "workbench.startupEditor": "none",
+    "[clojure]": {
+        "editor.autoClosingBrackets": "always",
+        "editor.autoClosingOvertype": "always",
+        "editor.formatOnPaste": true
+    },
+    "peacock.affectPanelBorder": true,
+    "githubPullRequests.createOnPublishBranch": "never",
+    "sqltools.useNodeRuntime": true,
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "d.dubCompiler": "dmd",
+    "d.stdlibPath": "auto",
+    "d.dubPath": "/usr/bin/dub",
+    "explorer.confirmDelete": false,
+    "d.servedPath": "/home/stuart/.local/share/code-d/bin/serve-d",
+    "vsicons.dontShowNewVersionMessage": true,
+    "FSharp.suggestGitignore": false,
+    "editor.inlineSuggest.enabled": true,
+    "githubIssues.queries": [
+        {
+            "label": "My Issues",
+            "query": "default"
+        },
+        {
+            "label": "Created Issues",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        },
+        {
+            "label": "Recent Issues",
+            "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+        }
+    ],
+    "workbench.productIconTheme": "macos-modern",
+    "github.copilot.advanced": {
+    
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "files.saveConflictResolution": "overwriteFileOnDisk"
 }
