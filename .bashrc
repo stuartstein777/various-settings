@@ -138,7 +138,29 @@ unset __conda_setup
 alias ls=exa
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
-
+alias i='sudo apt install '
+alias r='sudo apt remove '
+alias emacs='emacs26 -nw '
+alias wtr='curl wttr.in/gla'
+alias cheat='cht.sh'
+alias st='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
+alias cd='zoxide'
+alias swa='shadow-cljs watch app'
 
 export GRAALVM_HOME=~/graalvm-ce-java11-20.3.0
-export PATH=$GRAALVM_HOME/bin:$PATH
+export PATH=$GRAALVM_HOME/bin:$PATH:$HOME/dotnet
+. "$HOME/.cargo/env"
+
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=/usr/local/texlive/2021/bin/x86_64-linux${PATH:+:${PATH}}
+export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info${INFOPATH:+:${INFOPATH}}
+export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man${MANPATH:+:${MANPATH}}
+export PATH="$HOME/tools:$PATH/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:$PATH:$HOME/.cabal/bin:/home/stuart/.local/bin"
+
+[ -f "/home/stuart/.ghcup/env" ] && . "/home/stuart/.ghcup/env" # ghcup-env
+
+eval "$(zoxide init --cmd cd bash)"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+eval "$(starship init bash)"
