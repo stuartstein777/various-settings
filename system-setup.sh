@@ -50,6 +50,9 @@ sudo apt install darktable -y
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 
+sudo add-apt-repository universe
+sudo apt update
+
 # install utilities
 echo "${yellow}installing emacs"
 sudo apt install emacs -y
@@ -81,27 +84,27 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 echo "${yellow}installing youtube-dl"
 sudo apt install youtube-dl -y
 echo "${yellow}installing bat (a better cat)"
-sudo apt install bat
+sudo apt install bat -y
 echo "${yellow}installing eza (a better ls) dependencies"
-sudo apt install -y gpg
+sudo apt install -y gpg -y
 sudo mkdir -p /etc/apt/keyrings
 wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
 echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
 sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
 sudo apt update
-sudo apt install -y eza
+sudo apt install -y eza -y
 echo "${yellow}installing unzip"
-sudo apt install unzip
+sudo apt install unzip -y
 echo "${yellow}installing zoxide"
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 echo "${yellow}installing neofetch"
-sudo apt install neofetch
+sudo apt install neofetch -y
 echo "${yellow}installing homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo "${yellow}installing fzf"
 brew install fzf
 echo "${yellow}installing asciinema"
-sudo apt install asciinema
+sudo apt install asciinema -y
 
 
 echo "${yellow}installing Rider"
@@ -135,7 +138,7 @@ sudo curl -o ~/.bashrc https://github.com/stuartstein777/various-settings/blob/m
 # Download VS Code and install it
 echo "${yellow}Downloading and installing VS Code"
 curl -L -o ~/Downloads/vscode.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
-sudo dpkg -i ~/Downloads/vscode.deb
+sudo dpkg -i ~/Downloads/vscode.deb -y
 rm ~/Downloads/vscode.deb
 #clean up any missing dependencies
 sudo apt-get install -f 
@@ -143,8 +146,12 @@ sudo apt-get install -f
 # Install Discord
 echo "${yellow}installing discord"
 curl -o ~/Downloads/discord.deb 'https://dl.discordapp.net/apps/linux/0.0.55/discord-0.0.55.deb'
-sudo apt install ~/Downloads/discord.deb
+sudo apt install ~/Downloads/discord.deb -y
 rm ~/Downloads/discord.deb
 
+# Install Obsidian
+curl -L -o '~/Downloads/obsidian.deb' 'https://github.com/obsidianmd/obsidian-releases/releases/download/v1.7.4/obsidian_1.7.4_amd64.deb'
+sudo apt install ~/Downloads/obsidian.deb -y
+rm ~/Downloads/obsidian.deb
 
 
