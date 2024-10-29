@@ -112,7 +112,7 @@ sudo apt install snap -y
 sudo snap install rider --classic
 
 # setup emacs by pulling my init.el from github
-## TODO
+curl -o '~/.emacs.d/init.el' 'https://github.com/stuartstein777/various-settings/blob/main/init.el'
 
 # go to github and get my firefox user chrome
 ## TODO
@@ -120,9 +120,6 @@ sudo snap install rider --classic
 # Create source directory
 echo "${yellow}creating a source directory in home"
 mkdir ~/Source
-
-# Install VS Code
-# go to github and get my vs code userpreferences.json
 
 # install VLC
 echo "${yellow}installing vlc"
@@ -142,6 +139,11 @@ sudo dpkg -i ~/Downloads/vscode.deb -y
 rm ~/Downloads/vscode.deb
 #clean up any missing dependencies
 sudo apt-get install -f 
+echo "${yellow}Getting VS code user settings"
+curl -o '~/.config/Code/User/settings.json' '# Install VS Code
+# go to github and get my vs code userpreferences.json'
+echo "${yellow}Getting VS code keybindings"
+curl -o '~/.config/Code/User/keybindings.json' 'https://github.com/stuartstein777/various-settings/blob/main/keybindings.json'
 
 # Install Discord
 echo "${yellow}installing discord"
