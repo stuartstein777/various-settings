@@ -13,6 +13,8 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "prettifySymbolsMode.substitutions": [
+
+
         {
             "language": "clojure",
             "prettifySymbolsMode.renderOn": "none",
@@ -39,6 +41,96 @@
                     }
                 },
                 {
+                    "ugly": "omega",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "Ω",
+                },
+                {
+                    "ugly": "alpha",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "α",
+                },
+                {
+                    "ugly": "beta",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "β",
+                },
+                {
+                    "ugly": "theta",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "θ",
+                },
+                {
+                    "ugly": "delta",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "∆",
+                },
+                {
+                    "ugly": "mu",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "μ",
+                },
+                {
+                    "ugly": "pi",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "π",
+                },
+                {
+                    "ugly": "phi",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "φ",
+                },
+                {
+                    "ugly": "eta",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "η",
+                },
+                {
+                    "ugly": "gamma",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "γ",
+                },
+                {
+                    "ugly": "infinity",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "∞",
+                },
+                {
+                    "ugly": "psi",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "ψ",
+                },
+                {
+                    "ugly": "bit-xor",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "⊕",
+                },
+                {
+                    "ugly": "/",
+                    "pre": "\\(",
+                    "post": "\\s",
+                    "pretty": "÷",
+                },
+                {
+                    "ugly": "/",
+                    "pre": "\\s",
+                    "post": "\\s",
+                    "pretty": "÷",
+                },
+                {
                     "ugly": "fn",
                     "pre": "\\(",
                     "post": "\\s",
@@ -56,6 +148,15 @@
                         "color": "#ff3399"
                     }
                 },
+                {
+                    "ugly": "Math/sqrt",
+                    "pretty": "√",
+                     "pre": "",
+                    "post": "\\s",
+                    "style": {
+                        "color": "#00FFFF"
+                    }
+                },                
                 {
                     "ugly": "defn-",
                     "pretty": "λ-",
@@ -217,7 +318,6 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "go.toolsManagement.autoUpdate": true,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Cobalt2",
     "agdaMode.connection.agdaPath": "/usr/bin/agda",
     "github.gitAuthentication": false,
     "editor.semanticTokenColorCustomizations": null,
@@ -225,6 +325,15 @@
     "editor.tokenColorCustomizations": {
         "[Nord]": {
             "comments": "#93fccba1"
+        },
+        "[Cobalt2]": {
+            "comments": {
+                "fontStyle": "",
+                "foreground": "#93fccba1"
+            },
+            "strings": {
+                "fontStyle": ""
+            }
         }
     },        
     "workbench.preferredDarkColorTheme": "Nord",
@@ -234,8 +343,6 @@
         "switch:command",
         "push:command"
     ],
-    "window.zoomLevel": -1,
-    "editor.fontSize": 20,
     "workbench.startupEditor": "none",
     "[clojure]": {
         "editor.autoClosingBrackets": "always",
@@ -276,6 +383,18 @@
     "github.copilot.advanced": {
     
     },
-    "workbench.iconTheme": "vscode-icons",
-    "files.saveConflictResolution": "overwriteFileOnDisk"
+    "files.saveConflictResolution": "overwriteFileOnDisk",
+    "editor.codeActionsOnSave": {
+    
+    },
+    "window.zoomLevel": 1,
+    "easycode.model": "gpt-4",
+    "easycode.usePromptAssistant": false,
+    "git.confirmSync": false,
+    "security.workspace.trust.startupPrompt": "always",
+    "workbench.colorTheme": "Nord",
+    "workbench.editor.tabSizing": "shrink",
+    "cSpell.userWords": [
+        "neighbour"
+    ],
 }
