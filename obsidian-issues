@@ -1,0 +1,8 @@
+Too many file watchers error:
+
+Add following to sysctl.conf
+
+fs.inotify.max_user_instances=8892
+fs.inotify.max_user_watches=524288
+
+
