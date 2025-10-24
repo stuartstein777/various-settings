@@ -157,9 +157,11 @@ alias cat=batcat
 alias godot='DOTNET_ROOT=/usr/lib/dotnet/6.0 godot'
 alias uu='sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get autoremove -y'
 alias fix-phone='sudo killall gvfsd && nautilus -q'
-alias reset-shell='. ~/.profile'
+alias reset-shell='source ~/.bashrc'
 alias ytdl="/usr/bin/python3 /usr/local/bin/yt-dlp"
-
+alias tempe="cd ~/tempe"
+alias ctempe="rm -rf ~/tempe/*"
+alias scratch="emacs ~/tempe/scratch"
 
 export GRAALVM_HOME=~/graalvm-ce-java11-20.3.0
 export PATH=$GRAALVM_HOME/bin:$PATH:$HOME/dotnet
