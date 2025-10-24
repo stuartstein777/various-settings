@@ -56,6 +56,11 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# make a directory and cd into it
+mkcd() {
+    mkdir -p "$1" && cd "$1"
+}
+
 timeNow(){
   echo "$(date +%R)"
 }
@@ -141,11 +146,20 @@ alias diff='diff --color=auto'
 alias i='sudo apt install '
 alias r='sudo apt remove '
 alias emacs='emacs26 -nw '
+alias emcas='emacs26 -nw '
 alias wtr='curl wttr.in/gla'
 alias cheat='cht.sh'
 alias st='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
 alias cd='zoxide'
 alias swa='shadow-cljs watch app'
+alias bat=batcat
+alias cat=batcat
+alias godot='DOTNET_ROOT=/usr/lib/dotnet/6.0 godot'
+alias uu='sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get autoremove -y'
+alias fix-phone='sudo killall gvfsd && nautilus -q'
+alias reset-shell='. ~/.profile'
+alias ytdl="/usr/bin/python3 /usr/local/bin/yt-dlp"
+
 
 export GRAALVM_HOME=~/graalvm-ce-java11-20.3.0
 export PATH=$GRAALVM_HOME/bin:$PATH:$HOME/dotnet
@@ -155,7 +169,7 @@ export DOTNET_ROOT=$HOME/dotnet
 export PATH=/usr/local/texlive/2021/bin/x86_64-linux${PATH:+:${PATH}}
 export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info${INFOPATH:+:${INFOPATH}}
 export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man${MANPATH:+:${MANPATH}}
-export PATH="$HOME/tools:$PATH/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:$PATH:$HOME/.cabal/bin:/home/stuart/.local/bin"
+export PATH="$HOME/tools:$PATH/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:$PATH:$HOME/.cabal/bin:/home/stuart/.local/bin:$HOME/dotnet"
 
 [ -f "/home/stuart/.ghcup/env" ] && . "/home/stuart/.ghcup/env" # ghcup-env
 
@@ -164,3 +178,5 @@ eval "$(zoxide init --cmd cd bash)"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 eval "$(starship init bash)"
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$DOTNET_ROOT:$PATH
